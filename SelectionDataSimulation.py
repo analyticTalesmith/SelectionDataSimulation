@@ -121,7 +121,7 @@ def generate_expense_referral(inJob):
 
 
 #Constants
-FILLED_JOBS_PER_DEPARTMENT  = 200
+FILLED_JOBS_PER_BRANCH      = 200
 RANGE_OF_DATA_YRS           = 1
 BRANCH_EFFICIENCY_SD        = .3
 MEAN_ROLL_FILL              = 28
@@ -164,7 +164,7 @@ for brn in BRANCHES:
             talent.append(tempTalent)
 
     #Generate historical data for roles that have been filled, based on defined constant
-    for i in range(0,FILLED_JOBS_PER_DEPARTMENT):
+    for i in range(0,FILLED_JOBS_PER_BRANCH):
         dpt = DEPARTMENTS[random.randint(0,len(DEPARTMENTS) - 1)]
         filledJob = generate_filled_opening(brn,dpt)
         openings.append(filledJob)
