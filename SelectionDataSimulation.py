@@ -146,7 +146,7 @@ expenses    = []
 for brn in BRANCHES:
 
     #Determine number of currently open positions in the branch
-    ctCurOpen = max(0, random.randint(0,10) - 3)
+    ctCurOpen = max(0, random.randint(1,10) - 3)
     for i in range(0,ctCurOpen):
         dpt = DEPARTMENTS[random.randint(0,len(DEPARTMENTS) - 1)]
         tempOpening = generate_unfilled_opening(brn, dpt)
